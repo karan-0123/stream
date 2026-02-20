@@ -6,13 +6,12 @@ st.title("My First Streamlit App")
 st.write("Hello, Karan here")
 st.text("Hii, this is my first streamlit app.")
 
-# df = pd.DataFrame(np.random.randn(10, 2), columns=['A', 'B'])
+df = pd.DataFrame(np.random.randn(10, 2), columns=['A', 'B'])
 
-# st.line_chart(df)
-# st.bar_chart(df)
+st.line_chart(df)
+st.bar_chart(df)
 
 st.sidebar.title("Navigation")
-st.image("20241214.jpg")
 st.video("https://www.youtube.com/watch?v=gdx7gN1UyX0&list=RDgdx7gN1UyX0&start_radio=1")
 
 upload_file = st.file_uploader("Ponds.csv", type='csv')
@@ -53,4 +52,5 @@ with st.form("login_form"):
     submitted = st.form_submit_button("Login")
     
 if submitted:
+
     st.success(f"Welcome, {username}!")
